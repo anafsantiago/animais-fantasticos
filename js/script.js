@@ -3,7 +3,7 @@
 
 //Quando está importando somente uma função, o nome da função não precisa ser o mesmo, mas, como boa prática, geralmente, é. Porém, quando se importa mais de uma, os nomes devem ser exatamente os mesmos
 
-import initScrollSuave from "./modules/scroll-suave.js";
+import ScrollSuave from "./modules/scroll-suave.js";
 import initAnimaScroll from "./modules/scroll-animacao.js";
 import initAccordion from "./modules/accordion.js";
 import initTabNav from "./modules/tabnav.js";
@@ -15,7 +15,9 @@ import initFuncionamento from "./modules/funcionamento.js";
 import initFetchAnimais from "./modules/fetch-animais.js";
 import initFetchBitcoin from "./modules/fetch-bitcoin.js";
 
-initScrollSuave();
+const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
+scrollSuave.init();
+
 initAnimaScroll();
 initAccordion();
 initTabNav();
